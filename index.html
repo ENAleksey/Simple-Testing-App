@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <style>
+        body {
+            margin: 0;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: default;
+            font-family: Segoe UI,SegoeUI,Segoe WP,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+            
+        }
+
+        .container {
+            padding: 12px;
+            width: 640px;
+            max-width: 85vw;
+            margin: 12px auto 48px auto;
+        }
+
+        .info {
+            margin: 0 24px 48px 24px;
+        }
+
+        .title {
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .description {
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #666;
+            -ms-user-select: element;
+            user-select: element;
+        }
+
+        form {
+            margin-bottom: 28px;
+            padding: 18px 24px;
+            box-shadow: 0 0 24px rgba(0,0,0,.2);
+            border-radius: 12px;
+        }
+
+        .question {
+            font-size: 18px;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .button {
+            display: block;
+            margin-left: auto;
+            margin-right: 0;
+            padding: 16px;
+            width: 240px;
+            background-color: #7cb342;
+            color: #FFFFFF;
+            border-radius: 8px;
+            border: none;
+            font-size: 18px;
+            transition: all 0.5s;
+            cursor: pointer;
+            box-shadow: 0 0 24px rgba(0,0,0,.2);
+        }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.3s;
+            }
+
+                .button span:after {
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.3s;
+                }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+                .button:hover span:after {
+                    opacity: 1;
+                    right: 0;
+                }
+
+        .checkcontainer {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            .checkcontainer input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+        .radiobtn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #dcedc8;
+            border-radius: 50%;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #dcedc8;
+            border-radius: 2px;
+        }
+
+        .checkcontainer:hover input ~ .checkmark, .checkcontainer:hover input ~ .radiobtn {
+            background-color: #c5e1a5;
+        }
+
+        .checkcontainer input:checked ~ .checkmark, .checkcontainer input:checked ~ .radiobtn {
+            background-color: #7cb342;
+        }
+
+        .checkmark:after, .radiobtn:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .checkcontainer input:checked ~ .checkmark:after, .checkcontainer input:checked ~ .radiobtn:after {
+            display: block;
+        }
+
+        .checkcontainer .radiobtn:after {
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .checkcontainer .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        #nameInput {
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid rgba(0,0,0,0.12);
+            width: 100%;
+            height: 25px;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+            #nameInput:focus {
+                border-bottom: 2px solid #7cb342;
+            }
+
+            #nameInput::-ms-clear {
+                color: #AAA;
+            }
+
+            #nameInput:-ms-input-placeholder {
+                color: #666;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {0}
+    </div>
+</body>
+</html>
