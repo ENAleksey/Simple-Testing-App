@@ -22,9 +22,9 @@
 = Название теста
 == Описание теста
 
-@ en.aleksey@gmail.com
-@@ enaleksey.psu@gmail.com
-# dfdKTdg34F^#gf)_9f
+@ email.to@gmail.com
+@@ email.from@gmail.com
+# mypassword
 
 
 ??2 Вопрос с несколькими ответами:
